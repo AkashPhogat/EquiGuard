@@ -81,7 +81,7 @@ Evaluated once on a held-out test set of 133 horses that the model had never see
 
 ### Ablation Study
 
-![Ablation Study](figures/ablation_study.png)
+![Ablation Study](figures/ablation.png)
 
 ### ROC Curve
 
