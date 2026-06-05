@@ -94,20 +94,21 @@ Evaluated once on a held-out test set of 133 horses that the model had never see
 * Stacking without Mahalanobis: $F1 = 0.8039$
 
 Removing the Mahalanobis feature dropped ensemble F1 by 12.56 percentage points.
-
 ## Dataset
 
-**Primary: Figshare B — Martel 2024**
-* 307 Thoroughbred racehorses (156 from Singapore Turf Club, 151 from Hong Kong Jockey Club)
-* Funded by The Hong Kong Jockey Club Equine Welfare Research Foundation and the Horserace Betting Levy Board
+The datasets used in this project are publicly available and are **not** included in this repository. To run the pipeline, you must download the original datasets from their respective providers and place them in the local `data/raw/` directory.
+
+**Primary: Figshare B** ([Martel et al., 2024](https://figshare.com/articles/dataset/Associations_between_Racing_Thoroughbred_MovementAsymmetries_and_Racing_and_Training_Direction_accepted_for_publication_in_Animlas_under_this_title_/24312568))
+* 307 Thoroughbred racehorses (156 from Singapore Turf Club, 151 from Hong Kong Jockey Club).
+* Funded by The Hong Kong Jockey Club Equine Welfare Research Foundation and the Horserace Betting Levy Board.
 * Labels generated using Keegan 2007 clinical thresholds:
     * `label = 1` if $|MnDHead| > 6\text{mm}$ OR $|MnDSac| > 3\text{mm}$
     * `label = 0` otherwise
-* 79.8% lame rate. Clinically expected in elite racing populations. Not a labeling error.
+* The dataset contains a high proportion of lame horses, reflecting the characteristics of the elite racing population studied.
 
-**Secondary: Gmel EQUIMOVES — Braganca et al.**
-* 428 confirmed-sound horses
-* Used only for Mahalanobis healthy centroid computation
+**Secondary: Gmel EQUIMOVES** ([Braganca et al.](https://data.mendeley.com/datasets/c24tf9332k/3))
+* 428 confirmed-sound horses.
+* Used exclusively for the Mahalanobis healthy centroid computation.
 
 ## Reproduce
 
